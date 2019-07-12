@@ -8,7 +8,7 @@ import java.util.List;
 @Data
 public class InformationUser {
 
-    private SummonerDTO summonerinfo;
+    private String summonerName;
     private List<LeagueDTO> leagueInfo;
 
 }

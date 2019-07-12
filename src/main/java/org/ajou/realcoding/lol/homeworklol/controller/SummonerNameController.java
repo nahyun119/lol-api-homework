@@ -33,7 +33,8 @@ public class SummonerNameController {
     public InformationUser getSummonerId(@PathVariable String summonerName) throws IOException, InterruptedException {
         InformationUser informationUser = new InformationUser();
         SummonerDTO summonerDTO = summonerIdApiClient.requestSummonerDTO(summonerName);
-        informationUser.setSummonerinfo(summonerDTO);
+        String name = summonerDTO.getName();
+        informationUser.setSummonerName(name);;
         String id = summonerDTO.getId();
         List<LeagueDTO> leagues = summonerLeaguePosiApiClient.requestLeagueDTO(id);
         informationUser.setLeagueInfo(leagues);
